@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    background-color:#0D0821;
+    font-family: 'Montserrat Alternates',sans-serif;
+}
+#logo img{
+    align-items:center;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 160px;
+    height: 86px;
+    border-radius: 5%;
+    border: 1px solid #FFC107;
+    box-shadow: 0px 0px 10px #FFC107;
+}
+#content h2{
+    color:antiquewhite;
+    font-weight:normal;
+    text-align: center;
+    margin-top: 150px;
+    font-size: 30px;
+    animation: slideIn 1.5s forwards;
+}
+#search .search-container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    animation: slideIn 2s forwards;
+}
+#search .search-container input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #0D0821 ;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px #FFC107;
+}
+#search  button{
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-left: 590px;
+    border: 1px solid #0D0821 ;
+    animation: slideIn 2.5s forwards;
+}
+@keyframes slideIn {
+    0% {
+        left: -100px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
