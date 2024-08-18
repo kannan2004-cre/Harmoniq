@@ -1,78 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
-    background-color:#0D0821;
-    font-family: 'Montserrat Alternates',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-#nav {
-    margin-right: 20px;
-}
-
-#nav a {
-    color: #ffffff;
-    font-size: 18px;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); 
-    box-shadow: 
-        0 0 15px rgba(146, 141, 171, 0.5), 
-        0 0 30px rgba(146, 141, 171, 0.5), 
-        inset 0 0 5px rgba(255, 255, 255, 0.3); 
-    transition: all 0.3s ease;
-    letter-spacing: 1.2px;
-    margin-left:1100px;
-    margin-top:10px;
-    height:5px;
-    width:10px;
-}
-
-#nav a:hover {
-    transform: scale(1.05);
-    box-shadow: 
-        0 0 20px rgba(146, 141, 171, 0.7), 
-        0 0 40px rgba(146, 141, 171, 0.7), 
-        inset 0 0 7px rgba(255, 255, 255, 0.4);
-}
-
-#nav a:active {
-    transform: scale(0.95); 
-    box-shadow: 
-        0 0 10px rgba(146, 141, 171, 0.7), 
-        0 0 20px rgba(146, 141, 171, 0.7), 
-        inset 0 0 5px rgba(255, 255, 255, 0.3); 
-}
-#logo{
+body {
+    background-image: url('./images/backgorund.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #FFFFFF;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 10px;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
 }
-#logo img{
-    align-items:center;
-    margin-right: 1050px;
-    margin-top: 10px;
+#logo {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#logo img {
     width: 160px;
     height: 86px;
     border-radius: 5%;
     border: 1px solid #FFC107;
     box-shadow: 0px 0px 10px #FFC107;
 }
-#content h2{
-    color:antiquewhite;
-    font-weight:normal;
-    text-align: center;
-    margin-top: 150px;
+#content h2 {
+    color: antiquewhite;
+    font-weight: normal;
+    margin-top: 50px;
     font-size: 30px;
     animation: slideIn 1.5s forwards;
+    text-align: center;
 }
 #search .search-container {
-    margin: 0 auto;
     width: 100%;
     max-width: 500px;
     padding: 20px;
-    text-align: center;
+    margin: 20px auto;
     animation: slideIn 2s forwards;
 }
 
@@ -82,143 +52,78 @@ body{
     font-size: 16px;
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Matches the button gradient */
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     color: #ffffff;
-    box-sizing: border-box;
-    box-shadow: 
-        0 0 15px rgba(146, 141, 171, 0.5), 
-        inset 0 0 10px rgba(255, 255, 255, 0.2); /* Subtle inner glow */
-    transition: box-shadow 0.3s ease, background 0.3s ease;
-    font-family: 'Poppins', sans-serif;
     text-align: center;
-}
-
-#search .search-container input[type="text"]::placeholder {
-    color: rgba(255, 255, 255, 0.7); /* Semi-transparent white for placeholder text */
-    font-style: italic;
-}
-
-#search .search-container input[type="text"]:focus {
-    outline: none;
-    box-shadow: 
-        0 0 20px rgba(60, 60, 90, 0.7), 
-        inset 0 0 15px rgba(255, 255, 255, 0.3); /* Stronger glow on focus */
-    background: linear-gradient(135deg, #1c1b29, #423b63, #3e3e3e); /* Slightly brighter gradient on focus */
+    margin-bottom: 10px;
 }
 #search-button {
     padding: 12px 25px;
     font-size: 16px;
     border-radius: 50px;
     cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
     border: none;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Dark, deep colors for a sleek look */
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     color: #ffffff;
-    box-shadow: 
-        0 0 20px rgba(50, 50, 70, 0.5), 
-        0 0 40px rgba(50, 50, 70, 0.5), 
-        inset 0 0 10px #ffffff; /* Glowing effect */
+    box-shadow: 0 0 20px rgba(50, 50, 70, 0.5), 0 0 40px rgba(50, 50, 70, 0.5), inset 0 0 10px #ffffff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: slideIn 2.5s forwards;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
 }
 
 #search-button:hover {
     transform: scale(1.1);
-    box-shadow: 
-        0 0 25px rgba(60, 60, 90, 0.7), 
-        0 0 50px rgba(60, 60, 90, 0.7), 
-        inset 0 0 15px #ffffff; /* Stronger glow on hover */
+    box-shadow: 0 0 25px rgba(60, 60, 90, 0.7), 0 0 50px rgba(60, 60, 90, 0.7), inset 0 0 15px #ffffff;
 }
 
 #search-button:active {
     transform: scale(0.98); 
-    box-shadow: 
-        0 0 15px rgba(60, 60, 90, 0.7), 
-        0 0 30px rgba(60, 60, 90, 0.7), 
-        inset 0 0 10px #ffffff;
+    box-shadow: 0 0 15px rgba(60, 60, 90, 0.7), 0 0 30px rgba(60, 60, 90, 0.7), inset 0 0 10px #ffffff;
 }
-
-
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-@keyframes slideIn {
-    0% {
-        left: -100px;
-        opacity: 0;
-    }
-    100% {
-        left: 0;
-        opacity: 1;
-    }
-}
-
 @media (max-width: 768px) {
-    #nav {
-        margin-right: 10px;
-    }
-    #nav a {
-        font-size: 16px;
-        padding: 8px 16px;
-    }
     #content h2 {
         font-size: 24px;
-        margin-top: 30px;
+        margin-top: 20px;
     }
+
     #logo img {
         width: 140px;
         height: 76px;
     }
+
+    #search .search-container input[type="text"] {
+        font-size: 14px;
+    }
+
     #search-button {
         font-size: 14px;
-        padding: 8px 16px;
+        padding: 10px 20px;
     }
 }
 
 @media (max-width: 480px) {
-    #nav a {
-        font-size: 14px;
-        padding: 6px 12px;
-    }
     #content h2 {
         font-size: 20px;
-        margin-top: 20px;
+        margin-top: 10px;
     }
+
     #logo img {
         width: 120px;
         height: 66px;
     }
+
     #search .search-container {
         padding: 10px;
     }
-    #search .search-container input[type="text"] {
-        font-size: 14px;
-    }
+
     #search-button {
         font-size: 12px;
-        padding: 6px 12px;
+        padding: 8px 16px;
     }
 }
+
+
+
+
