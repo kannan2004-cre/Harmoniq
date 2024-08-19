@@ -13,16 +13,42 @@
   <div id="logo"><a href="index.html">
       <img src="./images/logo.png" alt="Harmoniq Logo">
     </a>
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
   </div>
   <div id="content">
     <h2>Listen to your favourite songs seamleslly with Harmoniq</h2>
     <div id="search">
       <div class="search-container">
-        <input type="text" placeholder="Search for songs">
+        <input type="text" id="songsearch" placeholder="Search for songs">
       </div>
-      <button id="search-button">Search</button>
+      <button id="search-button" onclick="searchsong()">Search</button>
     </div>
   </div>
+  <div id="song" class="song-container">
+  </div>
+  <div id="now-playing" class="now-playing">
+    <h3>Now Playing:</h3>
+    <div id="now-playing-info"></div>
+    <div id="audio-player"></div> <!-- The YouTube player will be injected here -->
+</div>
+   <script src="script.js"></script>
+   <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 
 </html>
