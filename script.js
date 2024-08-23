@@ -43,16 +43,6 @@ function displaySongs(songs) {
     });
 }
 
-function playSong(videoId, title, artist) {
-    const nowPlayingInfo = document.getElementById('now-playing-info');
-    const audioPlayer = document.getElementById('audio-player');
-
-    nowPlayingInfo.innerHTML = `<strong>${title}</strong> by ${artist}`;
-
-    // Load the audio stream of the video
-    audioPlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1&showinfo=0&modestbranding=1&autohide=1&playsinline=1`;
-    audioPlayer.play();
-}
 let player;
 
 function onYouTubeIframeAPIReady() {
@@ -84,6 +74,8 @@ function playSong(videoId, title, artist) {
             }
         });
     }
+
+    playbutton.classList.add("active"); // Set the play button to active when a song is played
 }
 
 function onPlayerReady(event) {
@@ -92,7 +84,24 @@ function onPlayerReady(event) {
 
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.ENDED) {
-        // Do something when the song ends
+        playbutton.classList.remove("active"); // Remove active class when the song ends
     }
 }
 
+document.getElementById('songsearch').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        searchsong();
+    }
+});
+
+function togglePlayPause(){
+    const playbutton=document.getElementById("play-pause-button");
+    if(player && player.getPlayerState()===YT.PlayerState.PLAYING){
+        player.pauseVideo();
+        playbutton.textContent='Play';
+    }
+    else if(player){
+        player.playVideo();
+        playbutton.textContent='Pause';
+    }
+}
