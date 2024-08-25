@@ -360,7 +360,13 @@ body {
       padding: 15px;
   }
 }
+ footer a{
+  color:#ccc;
+ }
 
+ footer a:hover{
+  color:#fff;
+ }
 
 
 
